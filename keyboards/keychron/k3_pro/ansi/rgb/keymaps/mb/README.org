@@ -10,6 +10,7 @@
   + =C= =_= =G= =S=; See https://precondition.github.io/home-row-mods
   + =A= not mapped as it caused too many typos for me, and I rarely use it
   + includes dynamic tapping term
+- RGB layer indicator for configured keys
 
 * VIA v3 definition
 #+begin_src json :tangle "K3-Pro-ANSI-RGB.json"
