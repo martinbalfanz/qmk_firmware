@@ -6,6 +6,7 @@
 - add numpad layer
 - enable support for dynamic macros
 - add VIA v3 definition
+- change default color effect to solid color
 
 * VIA v3 definition
 #+begin_src json :tangle "K3-Pro-ANSI-RGB.json"
