@@ -3,10 +3,13 @@
 - swap RGB and DEL
 - map CAPS to LCTL
 - map RCMMD to LCAG
-- add numpad layer
 - enable support for dynamic macros
 - add VIA v3 definition
 - change default color effect to solid color
+- add layer with homerow mods
+  + =C= =_= =G= =S=; See https://precondition.github.io/home-row-mods
+  + =A= not mapped as it caused too many typos for me, and I rarely use it
+  + includes dynamic tapping term
 
 * VIA v3 definition
 #+begin_src json :tangle "K3-Pro-ANSI-RGB.json"
