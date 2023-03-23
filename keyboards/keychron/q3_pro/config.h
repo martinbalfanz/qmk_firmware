@@ -36,6 +36,13 @@
 #define DIP_SWITCH_PINS \
     { A8 }
 
+/* Increase I2C speed to 1000 KHz */
+#define I2C1_TIMINGR_PRESC 0U
+#define I2C1_TIMINGR_SCLDEL 3U
+#define I2C1_TIMINGR_SDADEL 0U
+#define I2C1_TIMINGR_SCLH 15U
+#define I2C1_TIMINGR_SCLL 51U
+
 #ifdef KC_BLUETOOTH_ENABLE
 /* Hardware configuration */
 #    define USB_BT_MODE_SELECT_PIN C15
@@ -48,12 +55,10 @@
 #    define USB_POWER_CONNECTED_LEVEL 0
 
 #    define BAT_LOW_LED_PIN_STATE 1
-// #    define BAT_LOW_LED_PIN NO_PIN
-// #    define BAT_LOW_LED_PIN_ON_STATE 1
 
 #    define HOST_DEVICES_COUNT 3
 
-#    if defined(RGB_MATRIX_ENABLE) || defined(LED_MATRIX_ENABLE)
+#    if defined(RGB_MATRIX_ENABLE)
 
 #        define LED_DRIVER_SHUTDOWN_PIN C14
 
@@ -93,3 +98,7 @@
 /* Specifed (0,1) which programmed as "ESC" key on this keyboard as bootmagic key */
 #define BOOTMAGIC_LITE_ROW 0
 #define BOOTMAGIC_LITE_COLUMN 1
+
+/* Factory test keys */
+#define FN_KEY1 MO(1)
+#define FN_KEY2 MO(3)

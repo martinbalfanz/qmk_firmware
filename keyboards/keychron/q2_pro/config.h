@@ -36,6 +36,13 @@
 #define DIP_SWITCH_PINS \
     { A8 }
 
+/* Increase I2C speed to 1000 KHz */
+#define I2C1_TIMINGR_PRESC 0U
+#define I2C1_TIMINGR_SCLDEL 3U
+#define I2C1_TIMINGR_SDADEL 0U
+#define I2C1_TIMINGR_SCLH 15U
+#define I2C1_TIMINGR_SCLL 51U
+
 #ifdef KC_BLUETOOTH_ENABLE
 /* Hardware configuration */
 #    define USB_BT_MODE_SELECT_PIN C15
@@ -49,7 +56,7 @@
 
 #    define HOST_DEVICES_COUNT 3
 
-#    if defined(RGB_MATRIX_ENABLE) || defined(LED_MATRIX_ENABLE)
+#    if defined(RGB_MATRIX_ENABLE)
 
 #        define LED_DRIVER_SHUTDOWN_PIN C14
 
@@ -82,3 +89,7 @@
 /* Emulated EEPROM configuration */
 #define FEE_DENSITY_BYTES FEE_PAGE_SIZE
 #define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 2047
+
+/* Factory test keys */
+#define FN_KEY1 MO(2)
+#define FN_KEY2 MO(3)
