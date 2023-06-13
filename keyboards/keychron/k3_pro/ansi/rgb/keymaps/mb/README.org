@@ -11,6 +11,7 @@
   + =A= not mapped as it caused too many typos for me, and I rarely use it
   + includes dynamic tapping term
 - RGB layer indicator for configured keys
+- enable caps word
 
 * VIA v3 definition
 #+begin_src json :tangle "K3-Pro-ANSI-RGB.json"
