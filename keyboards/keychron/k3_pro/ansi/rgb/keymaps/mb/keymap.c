@@ -26,15 +26,15 @@ enum layers {
 };
 
 #define HOME_A LCTL_T(KC_A)
-/* #define HOME_S LOPT_T(KC_S) */
-#define HOME_S KC_S
+#define HOME_S LOPT_T(KC_S)
+/* #define HOME_S KC_S */
 #define HOME_D LCMD_T(KC_D)
 #define HOME_F LSFT_T(KC_F)
 
 #define HOME_J RSFT_T(KC_J)
 #define HOME_K RCMD_T(KC_K)
-/* #define HOME_L ROPT_T(KC_L) */
-#define HOME_L KC_L
+#define HOME_L ROPT_T(KC_L)
+/* #define HOME_L KC_L */
 #define HOME_SCLN RCTL_T(KC_SCLN)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
