@@ -36,6 +36,11 @@ enum layers {
 /* #define HOME_L KC_L */
 #define HOME_SCLN RCTL_T(KC_SCLN)
 
+#define MOD_MASK_LALT (MOD_BIT(KC_LALT))
+
+#define KO_LAYER_MASK(layer) (1 << layer)
+#define KO_LAYER_MASK_EXCEPT(layer) ((~0) & ~(1 << layer))
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [MAC_BASE] = LAYOUT_ansi_84(
      KC_ESC,   KC_BRID,  KC_BRIU,  KC_MCTL,  KC_LPAD,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,  KC_SNAP,  RGB_TOG,  KC_DEL,
@@ -70,6 +75,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_TRNS,  KC_TRNS,  KC_TRNS,                                KC_TRNS,                                KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS)
 };
 
+// disable lalt-tab on windows
+// See this link for bitmasking: https://www.reddit.com/r/olkb/comments/q2tclt/key_override_and_layer_bitmask_howto/
+const key_override_t nop_alt_tab = ko_make_with_layers(MOD_MASK_LALT, KC_TAB, KC_TAB, KO_LAYER_MASK(WIN_BASE));
+
+const key_override_t **key_overrides = (const key_override_t *[]){
+    &nop_alt_tab,
+    NULL
+};
 
 
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
