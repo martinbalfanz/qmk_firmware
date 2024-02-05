@@ -78,9 +78,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // disable lalt-tab on windows
 // See this link for bitmasking: https://www.reddit.com/r/olkb/comments/q2tclt/key_override_and_layer_bitmask_howto/
 const key_override_t nop_alt_tab = ko_make_with_layers(MOD_MASK_LALT, KC_TAB, KC_TAB, KO_LAYER_MASK(WIN_BASE));
+const key_override_t alt_esc_override = ko_make_with_layers(MOD_MASK_LALT, KC_ESC, LALT(KC_TAB), KO_LAYER_MASK(WIN_BASE));
 
 const key_override_t **key_overrides = (const key_override_t *[]){
     &nop_alt_tab,
+    &alt_esc_override,
     NULL
 };
 
